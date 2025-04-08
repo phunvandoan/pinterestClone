@@ -1,6 +1,11 @@
 import GalleryItem from "./galleryItem";
 
-export default function Gallery() {
+type PropsOfGallery = {
+  userId?: string;
+};
+
+export default function Gallery({ userId }: PropsOfGallery) {
+  console.log(userId);
   // TEMPORARY
   const items = [
     {
@@ -150,18 +155,6 @@ export default function Gallery() {
     {
       id: 25,
       media: "/pins/pin25.jpeg",
-      width: 1260,
-      height: 1260,
-    },
-    {
-      id: 26,
-      media: "/pins/pin26.jpeg",
-      width: 1260,
-      height: 1260,
-    },
-    {
-      id: 27,
-      media: "/pins/pin27.jpeg",
       width: 1260,
       height: 1260,
     },

@@ -1,5 +1,6 @@
 // haven't done
 import { Link } from "@remix-run/react";
+import Image from "../common/image";
 
 export default function LeftBar() {
   return (
@@ -9,38 +10,42 @@ export default function LeftBar() {
           to="/"
           className="w-[48px] h-[48px] flex items-center justify-center hover:bg-[#f1f1f1]"
         >
-          <img src="/general/logo.png" alt="" className="w-[24px] h-[24px]" />
+          <Image
+            path="/general/logo.png"
+            alt=""
+            className="w-[24px] h-[24px]"
+          />
         </Link>
         <Link
           to="/"
           className="w-[48px] h-[48px] flex items-center justify-center hover:bg-[#f1f1f1]"
         >
-          <img src="/general/home.svg" alt="" />
+          <Image path="/general/home.svg" alt="" />
         </Link>
         <Link
           to="/"
           className="w-[48px] h-[48px] flex items-center justify-center hover:bg-[#f1f1f1]"
         >
-          <img src="/general/create.svg" alt="" />
+          <Image path="/general/create.svg" alt="" />
         </Link>
         <Link
           to="/"
           className="w-[48px] h-[48px] flex items-center justify-center hover:bg-[#f1f1f1]"
         >
-          <img src="/general/updates.svg" alt="" />
+          <Image path="/general/updates.svg" alt="" />
         </Link>
         <Link
           to="/"
           className="w-[48px] h-[48px] flex items-center justify-center hover:bg-[#f1f1f1]"
         >
-          <img src="/general/messages.svg" alt="" />
+          <Image path="/general/messages.svg" alt="" />
         </Link>
       </div>
       <Link
         to="/"
         className="w-[48px] h-[48px] flex items-center justify-center hover:bg-[#f1f1f1]"
       >
-        <img src="/general/settings.svg" alt="" />
+        <Image path="/general/settings.svg" alt="" />
       </Link>
     </div>
   );
