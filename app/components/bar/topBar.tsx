@@ -1,4 +1,5 @@
 // haven't done
+import Image from "../common/image";
 import UserButton from "./userButton";
 
 export default function TopBar() {
@@ -9,7 +10,7 @@ export default function TopBar() {
         action=""
         className="flex-1 bg-[#f1f1f1] rounded-[16px] p-[16px] flex items-center gap-[16px]"
       >
-        <img src="/general/search.svg" alt="" />
+        <Image path="/general/search.svg" alt="" />
         <input
           className="flex-1 bg-transparent border-none outline-none text-[18px]"
           type="text"

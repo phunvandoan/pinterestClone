@@ -2,6 +2,7 @@
 
 import { Link } from "@remix-run/react";
 import { useState } from "react";
+import Image from "../common/image";
 
 export default function UserButton() {
   const [open, setOpen] = useState<boolean>(false);
@@ -16,13 +17,13 @@ export default function UserButton() {
 
   return currentUser ? (
     <div className="flex items-center gap-[16px] relative xsm:hidden">
-      <img
+      <Image
         className="w-[36px] h-[36px] border-[100%] object-cover"
-        src={currentUser.img || "/general/noAvatar.png"}
+        path={currentUser.img || "/general/noAvatar.png"}
         alt=""
       />
       <button onClick={() => setOpen((prev) => !prev)}>
-        <img src="/general/arrow.svg" alt="" className="w-[16px] h-[16px]" />
+        <Image path="/general/arrow.svg" alt="" className="w-[16px] h-[16px]" />
       </button>
       {open && (
         <div className="absolute right-0 top-[120%] p-[16px] rounded-[8px] bg-white z-50 flex flex-col text-[14px] shadow-[0px_0px_4px_1px_rgba(0,0,0,0.177)]">

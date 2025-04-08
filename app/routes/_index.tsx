@@ -1,8 +1,7 @@
 // haven't done
 import type { MetaFunction } from "@remix-run/node";
-import Gallery from "~/components/gallery";
-import LeftBar from "~/components/leftBar";
-import TopBar from "~/components/topBar";
+import Gallery from "~/components/gallery/gallery";
+import MainLayout from "~/components/layout/layout";
 
 export const meta: MetaFunction = () => {
   return [
@@ -13,12 +12,8 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="w-full flex gap-[16px]">
-      <LeftBar />
-      <div className="flex-1 mr-[16px]">
-        <TopBar />
-        <Gallery />
-      </div>
-    </div>
+    <MainLayout>
+      <Gallery />
+    </MainLayout>
   );
 }
